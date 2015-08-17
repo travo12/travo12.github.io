@@ -55,3 +55,14 @@ ul {
 #education {
 		margin-top: 24px;
 		}
+@media only screen and (max-width: 767px) {
+    .left {
+        text-align: left;
+    }
+
+    .center, .left, .right {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+    }
+}
