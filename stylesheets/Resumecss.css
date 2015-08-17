@@ -1,0 +1,57 @@
+html {
+	font-family: 'Segoe UI';
+	}
+
+header {
+	text-align: center;
+		}
+	
+header h1 {
+	line-height: 70%;
+	font-size: 40px;
+	}
+	
+header p{
+	line-height: 50%;
+	}
+
+div {
+	display: block;
+	}
+ul {
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 1em;
+	-webkit-padding-start: 20px;
+	}
+.section {
+	margin-top: 30px;
+	clear: both;
+	padding-top: 30px;
+	height: auto;
+
+	}
+	
+.left {
+    float: left;
+    width: 11%;
+    border-right-style: solid;
+    border-right-width: 2px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+	
+	}
+.center {
+	float: left;
+	padding-left: 10px;
+	font.size: 10px;
+	}
+
+.title {
+	font-weight: bold;
+	font-size: 18px;
+	}
+#education {
+		margin-top: 24px;
+		}
