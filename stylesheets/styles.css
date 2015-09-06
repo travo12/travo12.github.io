@@ -75,7 +75,7 @@ header ul li {
   float: left;
   border-right: 1px solid #3A7CBE;
   height: 38px;
-  background: rgb(55, 17, 23);
+  background: rgb(80,0,0);
   color: rgb(255, 255, 255);
 }
 
@@ -138,7 +138,7 @@ body {
 	font-size: 20px;
 	/* background-color: white; */
 	
-	background-image: linear-gradient(rgb(56, 16, 24) 4%, rgb(216, 216, 216) 39%, rgb(255, 255, 255) 96%);
+	background-image: linear-gradient(rgb(80,0,0) 4%, rgb(216, 216, 216) 39%, rgb(255, 255, 255) 96%);
 }
 
 #button{
@@ -154,7 +154,7 @@ body {
 	padding:50px 50px 50px 55px; 
 	margin-top: 50px;
 	font:100% 'trebuchet ms',helvetica,sans-serif;
-	background:rgb(55, 17, 23) 5px no-repeat;
+	background:rgb(80,0,0) 5px no-repeat;
 	box-shadow: 5px 5px 5px #da8170;
 	border-radius: 8px;
 }
