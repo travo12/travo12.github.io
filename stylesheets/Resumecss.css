@@ -1,7 +1,8 @@
+
 html {
 	font-family: 'Segoe UI';
 	}
-
+	
 header {
 	text-align: center;
 		}
@@ -15,6 +16,7 @@ header p{
 	line-height: 50%;
 	}
 
+
 div {
 	display: block;
 	}
@@ -23,6 +25,18 @@ ul {
 	-webkit-margin-after: 1em;
 	-webkit-padding-start: 20px;
 	}
+
+body{
+	display: block;
+	margin: 8px 8px 8px 8px;
+}
+	
+#content_wrapper {
+	max-width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}	
+	
 .section {
 	margin-top: 30px;
 	clear: both;
