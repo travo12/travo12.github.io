@@ -138,7 +138,11 @@ body {
 	font-size: 20px;
 	/* background-color: white; */
 	
+<<<<<<< HEAD
 	/* background-image: linear-gradient(rgb(80,0,0) 10%, rgb(216, 216, 216) 50%, rgb(255, 255, 255) 96%); */
+=======
+	background-image: linear-gradient(rgb(80,0,0) 4%, rgb(216, 216, 216) 39%, rgb(255, 255, 255) 96%);
+>>>>>>> origin/master
 }
 
 #button{
