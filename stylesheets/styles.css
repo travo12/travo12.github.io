@@ -2,7 +2,8 @@
 
 html 
 {
-	background-image: linear-gradient(rgb(80,0,0) 10%, rgb(216, 216, 216) 50%, rgb(255, 255, 255) 96%);
+	/*background-image: linear-gradient(rgb(80,0,0) 10%, rgb(216, 216, 216) 50%, rgb(255, 255, 255) 96%); */
+	background-color: rgb(80,0,0);
 }
 
 img.center {
@@ -17,8 +18,8 @@ img.center {
 header{
 	margin-top: 5px;
 	padding-top: 5px;
-	padding-bottom: 1px;
-	margin-bottom: -10px;
+	padding-bottom: 2px;
+	margin-bottom: 0px;
 	align: middle;
 	background-color: rgb(80,0,0);
 	text-align: center;
@@ -136,13 +137,14 @@ body {
 	text-align: center;
 	font:100% 'trebuchet ms',helvetica,sans-serif;
 	font-size: 20px;
-	/* background-color: white; */
 	
-<<<<<<< HEAD
-	/* background-image: linear-gradient(rgb(80,0,0) 10%, rgb(216, 216, 216) 50%, rgb(255, 255, 255) 96%); */
-=======
-	background-image: linear-gradient(rgb(80,0,0) 4%, rgb(216, 216, 216) 39%, rgb(255, 255, 255) 96%);
->>>>>>> origin/master
+	background-color: rgb(215, 215, 215);
+	
+	/* background-color: white; */
+	/*background-image: linear-gradient(rgb(80,0,0) 4%, rgb(216, 216, 216) 39%, rgb(255, 255, 255) 96%);
+	*/
+	
+	
 }
 
 #button{
@@ -177,5 +179,7 @@ body {
 	margin-right: 0px;
 	text-align: center;
 	text-align: bottom;
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(80,0,0);
+	padding-bottom: auto;
+	 /*background-color: rgb(255, 255, 255);*/
 }
