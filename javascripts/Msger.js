@@ -22,13 +22,34 @@
 		// above didnt work, but still useful code
 	//	var username;
 		
+		chatwindow = document.getElementById("chatwindow");		
+		//wsUri = document.getElementById("uname");
+		//wsUri.value = "http://localhost:8080";
+		
+		var pre = document.createElement("p");
+		pre.style.wordWrap = "break-word";
+		pre.innerHTML = "Welcome to Trav's Javascript Chat!";
+		chatwindow.appendChild(pre);
+		
+		var pree = document.createElement("p");
+		pree.style.wordWrap = "break-word";
+		pree.innerHTML ="Enter a Username and Press Connect!"
+		chatwindow.appendChild(pree);	
 		
 	$(function() {
-		$.connection.hub.url = "http://travserver.cloudapp.net:8080/signalr";
+		//$.connection.hub.url = "http://travserver.cloudapp.net:8080/signalr";
 		
-		var chat = $.connection.msgHub;
+				
+		$.connection.hub.url = "http://sigrmsgserver.azurewebsites.net/signalr";
 		
-		chat.client.addMessage = function (name, message) {
+		//$.connection.hub.url = "http://localhost:49795";
+						
+		var chat = $.connection.chatHub;
+		
+		chat.client.broadcastMessage = function (name, message) {
+			
+			
+			
 			var outmsg = name;
 			outmsg.concat(": ", message);
 			
@@ -41,12 +62,20 @@
 		
 		
 		
-		
 		$('#uname').val(prompt('Enter your name:', ''));
 		
 		$('#msgbox').focus();
-				
+		
+		$.connection.hub.logging = true;
+		
 		$.connection.hub.start().done(function() {
+			
+			var isrdy = document.createElement("p");
+			isrdy.style.wordWrap = "break-word";
+			isrdy.innerHTML ="Server is connected! start Chatting!"; 
+			chatwindow.appendChild(isrdy);
+			
+			
 			$("#send_button").click(function() {
 				
 				chat.server.send($('#uname').val(), $('#msgbox').val());
@@ -73,19 +102,7 @@
 	});
 				
 			
-		chatwindow = document.getElementById("chatwindow");
-				
-		//wsUri = document.getElementById("uname");
-		//wsUri.value = "http://localhost:8080";
 		
-		var pre = document.createElement("p");
-		pre.style.wordWrap = "break-word";
-		pre.innerHTML = "Welcome to Trav's Javascript Chat!";
-		chatwindow.appendChild(pre);
 		
-		var pree = document.createElement("p");
-		pree.style.wordWrap = "break-word";
-		pree.innerHTML ="Enter a Username and Press Connect!"
-		chatwindow.appendChild(pree);
 	
 	
