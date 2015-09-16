@@ -1,51 +1,26 @@
 
-
-//function ChangeButtonName()
-//		{
-//		document.getElementById("send_button").innerHTML = "Send";
-//		}
-
-/*		$(function()
-	{
-		var connection = $.connection("http://localhost:8080/signalr");
-		connection.start()
-		.done(function(){
-			connection.send("Hi There!");
-			
-		})
-		.fail(function() {
-			alert("Error connecting to realtime service");
-		});
 		
-		
-	}); */
-		// above didnt work, but still useful code
-	//	var username;
-		
+$(function() {
 		chatwindow = document.getElementById("chatwindow");		
-		//wsUri = document.getElementById("uname");
-		//wsUri.value = "http://localhost:8080";
-		
+
+		// adding intro lines to chat window
 		var pre = document.createElement("p");
 		pre.style.wordWrap = "break-word";
-		pre.innerHTML = "Welcome to Trav's Javascript Chat!";
+		pre.innerHTML = "Welcome to Trav's Javascript Chat.";
 		chatwindow.appendChild(pre);
 		
 		var pree = document.createElement("p");
 		pree.style.wordWrap = "break-word";
-		pree.innerHTML ="Enter a Username and Press Connect!"
+		pree.innerHTML ="Enter a Username and Press Connect."
 		chatwindow.appendChild(pree);	
+	
 		
-	$(function() {
-		//$.connection.hub.url = "http://travserver.cloudapp.net:8080/signalr";
-		
-				
-		$.connection.hub.url = "http://sigrmsgserver.azurewebsites.net/signalr";
-		
-		//$.connection.hub.url = "http://localhost:49795";
 						
+		$.connection.hub.url = "http://sigrmsgserver.azurewebsites.net/signalr";
+				
 		var chat = $.connection.chatHub;
 		
+		//This is the function for signalR to call on a message
 		chat.client.broadcastMessage = function (name, message) {
 			
 			
@@ -59,47 +34,60 @@
 			chatwindow.appendChild(pre);
 					
 		};
+	
+	var isready = 0;
+	
+	$('#uname').focus();
+	
+	$(document).keypress(function(event)
+			{
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if(keycode == '13')
+				{
+					if (isready == 0){
+						startChat();
+						isready = 1;
+					}
+				}	
+			});	
 		
+	$("#connect_button").click(function() {
+			startChat();
+	});
 		
-		
-		$('#uname').val(prompt('Enter your name:', ''));
-		
+	function startChat() {	
+		$('#getusername').fadeOut(800);
+		// for debugging
 		$('#msgbox').focus();
-		
 		$.connection.hub.logging = true;
-		
+		//establish connection
 		$.connection.hub.start().done(function() {
-			
+			// confirm connection established
 			var isrdy = document.createElement("p");
 			isrdy.style.wordWrap = "break-word";
 			isrdy.innerHTML ="Server is connected! start Chatting!"; 
 			chatwindow.appendChild(isrdy);
 			
-			
+			//send a message on click of send button
 			$("#send_button").click(function() {
-				
 				chat.server.send($('#uname').val(), $('#msgbox').val());
-				
 				$("#msgbox").val("").focus();
-			
 			});
-			
-			$(document).keypress(function(event){
-		
+			//send a message on enter keypress
+			$(document).keypress(function(event)
+			{
 				var keycode = (event.keyCode ? event.keyCode : event.which);
-				if(keycode == '13'){
-					chat.server.send($('#uname').val(), $('#msgbox').val());
-					
-					$("#msgbox").val("").focus();
-				
+				if(keycode == '13')
+				{
+					if (isready == 1){
+						chat.server.send($('#uname').val(), $('#msgbox').val());
+						$("#msgbox").val("").focus();
+					}
 				}
-				
 			});
-			
-		
 		});
-	
-	});
+	}
+});
 				
 			
 		
