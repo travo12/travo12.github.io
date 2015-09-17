@@ -128,7 +128,7 @@ body {
 	height: 400px;
 	margin-left: 0px;
 	margin-right: 0px;
-	font-size: 20px;
+	font-size: 18px;
 	
 	background-color: rgb(215, 215, 215);
 		
@@ -167,18 +167,19 @@ body {
 
 .footer {
 	padding-top: 5px;
-	margin-top:0px;
+	margin-top:5px;
 	margin-left: 0px;
 	margin-right: 0px;
 	text-align: center;
 	text-align: bottom;
 	background-color: rgb(80,0,0);
 	padding-bottom: auto;
+	font-weight: bold;
 
 }
 #msger{
 		padding: 15px;
-		height: 500px;
+		height: auto;
 }
 #messenger_program{
 	width: 500px;
@@ -209,12 +210,14 @@ p {
 
 #msgbox {
 	width: 250px;
+	border: solid 2px rgb(80,0,0);
+	margin-top:2px;
 	
 }
 
 #connect_button{
 	margin-top: 2px; 
-	
+	border: solid 1px rgb(80,0,0);
 	width: 80px;
 	font-size: 18px;
 }
@@ -224,22 +227,38 @@ p {
 	float:right;
 	width: 70px;
 	font-size: 14px;
+	border: solid 1px rgb(80,0,0);
 }
 
 #uname {
 	size: 35;
+	border: solid 2px rgb(80,0,0);
 }
 
 #getusername {
 	
 	text-align: center;
 	width: 100%;
-	height: 500px;
+	height: 375px;
 	background-color: rgb(215, 215, 215);
 	position: absolute;
 	z-index: 1;
 }
 
+.msgerexplination {
+	font-size:20px;
+	padding-top:40px;
+	width: 800px;
+	text-align: center;
+	width: auto;
+	margin-left: calc(50% - 350px)  ;
+	margin-right: calc(50% - 350px) ;
+}
+
+.msgdesc {
+	font-size: 18px;
+	padding: 3px;
+}
 
 
 
