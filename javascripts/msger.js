@@ -16,26 +16,40 @@ $(function() {
 	
 		
 						
-		$.connection.hub.url = "http://sigrmsgserver.azurewebsites.net/signalr";
+		$.connection.hub.url = "http://sigrmessageserver.azurewebsites.net/signalr";
 				
 		var chat = $.connection.chatHub;
 		
 		//This is the function for signalR to call on a message
-		chat.client.broadcastMessage = function (name, message) {
+		
+		chat.client.broadcastMessage = function (message) {
+			
+			
+				
+			var pre = document.createElement("p");
+			pre.style.wordWrap = "break-word";
+			pre.innerHTML = message; 
+			chatwindow.appendChild(pre);
+					
+		};  
+		
+		chat.client.ServerMessage = function (message) {
 			
 			
 			
-			var outmsg = name;
-			outmsg.concat(": ", message);
+			
 			
 			var pre = document.createElement("p");
 			pre.style.wordWrap = "break-word";
-			pre.innerHTML = name + ": " + message; 
+			pre.innerHTML = message; 
+			pre.style.color = "magenta";
 			chatwindow.appendChild(pre);
 					
 		};
+		
 	
 	var isready = 0;
+	var username;
 	
 	$('#uname').focus();
 	
@@ -45,8 +59,9 @@ $(function() {
 				if(keycode == '13')
 				{
 					if (isready == 0){
-						startChat();
 						isready = 1;
+						startChat();
+						
 					}
 				}	
 			});	
@@ -57,8 +72,8 @@ $(function() {
 		
 	function startChat() {	
 		$('#getusername').fadeOut(800);
-		// for debugging
 		$('#msgbox').focus();
+		// for debugging		
 		$.connection.hub.logging = true;
 		//establish connection
 		$.connection.hub.start().done(function() {
@@ -68,9 +83,13 @@ $(function() {
 			isrdy.innerHTML ="Server is connected! start Chatting!"; 
 			chatwindow.appendChild(isrdy);
 			
+			username = $("#uname").val();
+			
+			chat.server.join(username);
+			
 			//send a message on click of send button
 			$("#send_button").click(function() {
-				chat.server.send($('#uname').val(), $('#msgbox').val());
+				chat.server.send(username, $('#msgbox').val());
 				$("#msgbox").val("").focus();
 			});
 			//send a message on enter keypress
@@ -87,6 +106,12 @@ $(function() {
 			});
 		});
 	}
+	window.onbeforeunload = closingCode;
+	function closingCode(){
+	   chat.server.leave(username);
+	   return null;
+	}
+	
 });
 				
 			
