@@ -1,0 +1,43 @@
+<!doctype html>
+<style type="text/css">
+
+</style>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="stylesheets/styles.css">
+	<title>Travis Cragg's Website</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.0.min.js"></script>
+	
+</head>
+
+<body>
+<header>
+	<h1>Soundboard</h1>
+	<ul>
+		<li class="single"><a href="https://github.com/travo12/travo12.github.io">View On <strong>GitHub</strong></a></li>
+    </ul>
+
+</header>
+
+	<div class = "mid" id ="project_mid">
+			<div class = "center"> 
+			<h3>Click an Image!</h3>
+			<br><br>
+			<script>
+			function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
+			</script>
+				<img src="files/shea.jpg" onclick ="play()">
+				
+			</div>
+	</div>
+<audio id="audio" src="files/SheaSoundFinal.mp3" ></audio>			
+</body>
+<div class="footer">
+	<script type="text/javascript" src="javascripts/footer.js"></script>
+</div>
+</html>

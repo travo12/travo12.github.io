@@ -156,7 +156,37 @@ body {
 	background:rgb(80,0,0) 5px no-repeat;
 	box-shadow: 5px 5px 5px #da8170;
 	border-radius: 8px;
+	
+	
 }
+
+#project_button{
+	font-size: 18px;
+	color:rgb(173, 136, 141);
+	text-decoration: none;
+	font-weight: 900;
+	border:1px solid;
+	border-color:rgb(173, 136, 141);
+	margin:3px;
+
+
+	padding:50px 50px 50px 55px; 
+	font:100% 'trebuchet ms',helvetica,sans-serif;
+	background:rgb(80,0,0) 5px no-repeat;
+	box-shadow: 5px 5px 5px #da8170;
+	border-radius: 8px;
+	
+	margin-top: 3px;
+	line-height: 800%;
+	white-space:nowrap;
+}
+
+#project_mid{
+	padding-top:0px;
+	height: auto;
+	padding-bottom: 20px;
+}
+
 
 .center{
 	padding-top: 40px;
