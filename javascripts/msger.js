@@ -30,6 +30,7 @@ $(function() {
 			pre.style.wordWrap = "break-word";
 			pre.innerHTML = message; 
 			chatwindow.appendChild(pre);
+			$('#chatwindow').scrollTop(1000000);
 					
 		};  
 		
