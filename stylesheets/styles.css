@@ -173,11 +173,10 @@ body {
 	padding:50px 50px 50px 55px; 
 	font:100% 'trebuchet ms',helvetica,sans-serif;
 	background:rgb(80,0,0) 5px no-repeat;
-	box-shadow: 5px 5px 5px #da8170;
+	box-shadow: 2px 2px 2px #da8170; */
 	border-radius: 8px;
 	
-	margin-top: 3px;
-	line-height: 800%;
+	line-height: 720%;
 	white-space:nowrap;
 }
 
