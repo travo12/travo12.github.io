@@ -161,31 +161,37 @@ body {
 }
 
 #project_button{
-	font-size: 18px;
-	color:rgb(173, 136, 141);
-	text-decoration: none;
-	font-weight: 900;
-	border:1px solid;
-	border-color:rgb(173, 136, 141);
-	margin:3px;
-
-
-	padding:50px 50px 50px 55px; 
-	font:100% 'trebuchet ms',helvetica,sans-serif;
-	background:rgb(80,0,0) 5px no-repeat;
-	box-shadow: 2px 2px 2px #da8170; */
-	border-radius: 8px;
-	
-	line-height: 720%;
-	white-space:nowrap;
+	    font-size: 18px;
+    color: rgb(173, 136, 141);
+    text-decoration: none;
+    font-weight: 900;
+    border: 1px solid;
+    border-color: rgb(173, 136, 141);
+    margin: 3px;
+    /* padding: 50px 50px 50px 55px; */
+    font: 100% 'trebuchet ms',helvetica,sans-serif;
+    background: rgb(80,0,0) 5px no-repeat;
+    box-shadow: 2px 2px 2px #da8170;
+    line-height: 720%;
+    white-space: nowrap;
+    width: 300px;
+    align-items: center;
+    text-align: inherit;
+    DISPLAY: block;
 }
 
 #project_mid{
 	padding-top:0px;
 	height: auto;
 	padding-bottom: 20px;
-}
 
+}
+.CenterButtons{
+	position: relative;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -150px;
+}
 
 .center{
 	padding-top: 40px;
