@@ -2,7 +2,8 @@
 
 html 
 {
-	background-color: rgb(80,0,0);
+	/*background-color: rgb(80,0,0);*/
+	font-family: 'Cabin', sans-serif;
 }
 
 img.center {
@@ -14,17 +15,36 @@ img.center {
 }
 
 
-header{
-	margin-top: 5px;
+header.nonmid{
+	margin-top: 0px;
 	padding-top: 5px;
 	padding-bottom: 2px;
 	margin-bottom: 0px;
 	align: middle;
-	background-color: rgb(80,0,0);
+	background: linear-gradient(rgb(255,255,255) 50%, #2196F3 51%);
 	text-align: center;
-	color: rgb(173, 136, 141);
-	font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgb(10, 50, 30);
+	font-family: 'Cabin', sans-serif;
 	-webkit-font-smoothing: antialiased;
+	height: 150px;
+}
+header.index{
+	margin-top: 0px;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	margin-bottom: 0px;
+	align: middle;
+	background-color: rgb(255,255,255);
+	text-align: center;
+	color: rgb(10, 50, 30);
+	font-family: 'Cabin', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	height: 50px;
+}
+header h1 {
+	font-size: 50px;
+	margin-top: 1.6em;
+	color: rgb(255,255,255);
 }
 header ul {
   margin: 0;
@@ -75,7 +95,7 @@ header ul li {
   float: left;
   border-right: 1px solid #3A7CBE;
   height: 38px;
-  background: rgb(80,0,0);
+  background: #2196F3;
   color: rgb(255, 255, 255);
 }
 
@@ -113,7 +133,7 @@ header ul a strong {
 }
 
 #mainpagegitbutton {
-	top: 100px;
+	top: 10px;
 }
 
 body {
@@ -130,48 +150,70 @@ body {
 	margin-right: 0px;
 	font-size: 18px;
 	
-	background-color: rgb(215, 215, 215);
 		
 }
-
+.homeimg{
+	background-image: url('../images/kylenight.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 600px;
+}
+.imgoverlay{
+	    background: #000000;
+		opacity: 0.2;
+		position: absolute;
+		height: 140px;
+		width: 100%;
+		background: linear-gradient(#000000 90%, rgba(0, 0, 0, 0.1) 100%);
+}
+.imgheader{
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);    display: block;
+    font-size: 2em;
+	font-family: 'Cabin', sans-serif;
+	position: absolute;
+	width: 100%;
+}
 #mainpagedesc {
 	font-size: 20px;
 	text-align: center;
-	font: 100% 'trebuchet ms',helvetica,sans-serif;
+	font-family: 'Cabin', sans-serif;
 }
 
 #button{
-	font-size: 18px;
-	color:rgb(173, 136, 141);
-	text-decoration: none;
-	font-weight: 900;
-	border:1px solid;
-	border-color:rgb(173, 136, 141);
-	margin:3px;
-
-
-	padding:50px 50px 50px 55px; 
-	margin-top: 50px;
-	font:100% 'trebuchet ms',helvetica,sans-serif;
-	background:rgb(80,0,0) 5px no-repeat;
-	box-shadow: 5px 5px 5px #da8170;
-	border-radius: 8px;
-	
-	
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 900;
+    border: 1px solid;
+    margin: 3px 10px 3px 10px;
+    padding: 25px 50px 25px 55px;
+    margin-top: 50px;
+    font: 100% 'trebuchet ms',helvetica,sans-serif;
+	font-size: 25px;
+    background: #2196F3 5px no-repeat;
+    box-shadow: 0px 1px 0px #56636D, 0px 7px 0px #999;
+    border-radius: 8px;
+    border-color: rgb(46, 72, 93);
+}
+#button:active {
+	box-shadow: 0px 0px 0px;
 }
 
 #project_button{
-	    font-size: 18px;
-    color: rgb(173, 136, 141);
+	font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-weight: 900;
     border: 1px solid;
     border-color: rgb(173, 136, 141);
     margin: 3px;
     /* padding: 50px 50px 50px 55px; */
-    font: 100% 'trebuchet ms',helvetica,sans-serif;
-    background: rgb(80,0,0) 5px no-repeat;
-    box-shadow: 6px 6px 6px #735B56;
+    font-family: 'Cabin', sans-serif;
+    background: #2196F3 5px no-repeat;
+    box-shadow: 0px 1px 0px #56636D, 0px 7px 0px #999;
     line-height: 550%;
     white-space: nowrap;
     width: 300px;
@@ -179,6 +221,9 @@ body {
     text-align: inherit;
     DISPLAY: block;
 	border-radius: 30px;
+}
+#project_button:active {
+	box-shadow: 0px 0px 0px;
 }
 
 #project_mid{
@@ -197,25 +242,30 @@ body {
 .center{
 	padding-top: 40px;
 	text-align: center;
-	padding-bottom: 0px;
+	padding-bottom: 15px;
 	margin-bottom: 0px;
 }
 
 .footer {
 	padding-top: 5px;
-	margin-top:5px;
+	margin-top:25px;
 	margin-left: 0px;
 	margin-right: 0px;
 	text-align: center;
 	text-align: bottom;
-	background-color: rgb(80,0,0);
+	background: #2196F3 5px no-repeat;
 	padding-bottom: auto;
 	font-weight: bold;
+	color: rgb(255,255,255);
+	position: fixed;
+    width: 100%;
+    bottom: 0;
 
 }
 #msger{
 		padding: 15px;
 		height: auto;
+		padding-bottom: 30px;
 }
 #messenger_program{
 	width: 500px;
@@ -234,7 +284,7 @@ p {
 }
 
 #chatwindow{
-	border: solid 3px rgb(80,0,0);
+	border: solid 3px #2196F3 ;
 
     padding: 5px;
 	width: 100%;
@@ -246,14 +296,14 @@ p {
 
 #msgbox {
 	width: 250px;
-	border: solid 2px rgb(80,0,0);
+	border: solid 2px #2196F3 ;
 	margin-top:2px;
 	
 }
 
 #connect_button{
 	margin-top: 2px; 
-	border: solid 1px rgb(80,0,0);
+	border: solid 1px #2196F3 ;
 	width: 80px;
 	font-size: 18px;
 }
@@ -263,12 +313,12 @@ p {
 	float:right;
 	width: 70px;
 	font-size: 14px;
-	border: solid 1px rgb(80,0,0);
+	border: solid 1px #2196F3 ;
 }
 
 #uname {
 	size: 35;
-	border: solid 2px rgb(80,0,0);
+	border: solid 2px #2196F3 ;
 }
 
 #getusername {
@@ -297,13 +347,14 @@ p {
 }
 
 
-@media screen and (max-width: 880px){
+@media screen and (max-width: 916px){
 	#button {
 		width: auto;
 		height: auto;
 		margin-top: 3px;
 		line-height: 700%;
 		white-space:nowrap;
+		line-height: 450%;
 	}
 	.mid{
 		height: auto;
